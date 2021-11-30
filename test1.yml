@@ -1,0 +1,10 @@
+name: test-1
+on:
+  push: master
+jobs:
+  print-repo-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print repo name
+        run : |
+          echo "Hello $GITHUB_REPOSITORY"
