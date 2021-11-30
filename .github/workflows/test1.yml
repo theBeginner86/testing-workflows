@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Print repo name
         run : |
-          echo "Hello $GITHUB_REPOSITORY"
+          echo "Hello $GITHUB_REPOSITORY[5]"
