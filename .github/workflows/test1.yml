@@ -11,4 +11,4 @@ jobs:
           echo "Hello $GITHUB_REPOSITORY"
           echo "hello ${{ github.repository }}"
           echo "repo_name=$GITHUB_REPOSITORY" >> $GITHUB_env
-          echo "${{gihub.repo_name}}"
+          echo "${{env.repo_name}}"
