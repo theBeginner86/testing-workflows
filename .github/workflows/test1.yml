@@ -10,5 +10,6 @@ jobs:
         run : |
           echo "Hello $GITHUB_REPOSITORY"
           echo "hello ${{ github.repository }}"
-          echo "repo_name=$GITHUB_REPOSITORY" >> $GITHUB_ENV
-          echo "${{env.repo_name}}"
+          echo "STARS=$(curl --silent 'https://api.github.com/repos/$GITHUB_REPOSITORY' -H 'Accept: application/vnd.github.preview' | jq '.stargazers_count')" >> $GITHUB_ENV
+          echo "{{env.STARS}}"
+          
