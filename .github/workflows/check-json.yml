@@ -1,0 +1,19 @@
+name: testing newcommers
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  console:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: |
+          echo "${{github.sender}}"
+          echo "${{github.actor}}"
+          echo "${{github.event}}"
+          echo "${{github.event.issue_number}}"
+          echo "${{github.event.issue.number}}"
+          echo "${{toJson(github)}}"
+          echo "${{toJson(github.event)}}"
