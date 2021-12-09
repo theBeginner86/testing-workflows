@@ -22,3 +22,9 @@ jobs:
           echo "${env.l[*]}"
           echo "${{github.event.labels.name}}"
           echo "${{github.event.labels}}"
+  always-printing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: always-printing
+        run: |
+          echo "okokok"
