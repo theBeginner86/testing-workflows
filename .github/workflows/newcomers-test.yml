@@ -14,9 +14,10 @@ jobs:
           echo "${{github.actor}}"
           echo "${{github.event}}"
           echo "${{github.event.issue.html_url}}"
-          echo "labels=${{github.event.issue.labels}}" >> $GITHUB_ENV
+          echo "l=${{github.event.issue.labels}}" >> $GITHUB_ENV
+          echo "${{github.event.issue.labels}}"
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
-          echo "${{env.labels}}"
+          echo "${{env.l[*]}}"
           echo "${{github.event.labels.name}}"
           echo "${{github.event.labels}}"
