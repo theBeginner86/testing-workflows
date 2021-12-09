@@ -6,7 +6,7 @@ on:
 
 jobs:
   console:
-    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'documentation') 
+    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'good first issue') 
     name: notify working
     runs-on: ubuntu-latest
     steps:
