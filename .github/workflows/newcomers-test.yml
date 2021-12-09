@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: print
         run: |
-          echo "${{github.sener}}"
+          echo "${{github.sender}}"
+          echo "${{github.actor}}"
           echo "${{github}}"
 
