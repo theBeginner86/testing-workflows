@@ -6,7 +6,7 @@ on:
 
 jobs:
   console:
-    if: contains(github.event.issue.labels.*.name, 'bug')
+    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'documentation') 
     runs-on: ubuntu-latest
     steps:
       - name: print
