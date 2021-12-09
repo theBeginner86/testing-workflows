@@ -12,5 +12,6 @@ jobs:
         run: |
           echo "${{github.sender}}"
           echo "${{github.actor}}"
+          echo "${{github.event}}"
           echo "${{github.issue_number}}"
 
