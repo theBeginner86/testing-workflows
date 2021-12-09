@@ -6,7 +6,7 @@ on:
 
 jobs:
   console:
-    if: github.event.issue.labels.*.name == 'bug'
+    if: github.event.issue.labels.*.name == ['bug', 'documentation']
     runs-on: ubuntu-latest
     steps:
       - name: print
