@@ -20,8 +20,8 @@ jobs:
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
           echo "${{env.l}}"
-          echo "${{github.event.label.name}}"
-          echo github.event.labels
+          echo github.event.label.name
+          echo github.event.label
   always-printing:
     runs-on: ubuntu-latest
     steps:
