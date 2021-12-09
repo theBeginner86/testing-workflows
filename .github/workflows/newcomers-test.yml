@@ -18,4 +18,5 @@ jobs:
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
           echo "${{env.labels}}"
-          echo "${{github.event.label.name}}"
+          echo "${{github.event.labels.name}}"
+          echo "${{github.event.labels}}"
