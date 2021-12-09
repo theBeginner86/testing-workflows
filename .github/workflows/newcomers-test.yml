@@ -10,5 +10,6 @@ jobs:
     steps:
       - name: print
         run: |
-          echo "${{github.action}}"
-          
+          echo "${{github.sener}}"
+          echo "${{github}}"
+
