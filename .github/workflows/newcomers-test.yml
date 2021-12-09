@@ -1,0 +1,13 @@
+name: testing newcommers
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  console:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: |
+          echo "hello"
