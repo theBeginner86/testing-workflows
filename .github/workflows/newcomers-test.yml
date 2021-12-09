@@ -5,9 +5,9 @@ on:
     types: [opened, edited, labeled]
 
 jobs:
-  console:
-    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'good first issue') 
-    name: notify working
+  bug-job:
+    if: contains(github.event.issue.labels.*.name, 'bug')
+    name: bug
     runs-on: ubuntu-latest
     steps:
       - name: print
@@ -23,7 +23,9 @@ jobs:
           echo "${{env.l}}"
           echo github.event.label.name
           echo github.event.label
-  always-printing:
+  good-first-issue-job:
+    if: contains(github.event.issue.labels.*.name, 'good first issue') 
+    name:  good-first-issue
     runs-on: ubuntu-latest
     steps:
       - name: always-printing
