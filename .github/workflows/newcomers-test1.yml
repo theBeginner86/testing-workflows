@@ -13,5 +13,5 @@ jobs:
           echo "${{github.sender}}"
           echo "${{github.event}}"
           echo "${{github.actor}}"
-          echo "${{github.issue_number}}"
+          echo "${{github.issue.number}}"
 
