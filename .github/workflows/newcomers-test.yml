@@ -6,7 +6,7 @@ on:
 
 jobs:
   console:
-    if: github.event.issue.labels.name == 'bug'
+    if: github.event.issue.labels.*.name == 'bug'
     runs-on: ubuntu-latest
     steps:
       - name: print
@@ -16,7 +16,7 @@ jobs:
           echo "${{github.event}}"
           echo "${{github.event.issue.html_url}}"
           echo "l=${{github.event.issue.labels}}" >> $GITHUB_ENV
-          echo "${{github.event.issue.labels}}"
+          echo "${{github.event.issue.labels.*.name}}"
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
           echo "${{env.l}}"
