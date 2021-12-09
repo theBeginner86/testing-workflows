@@ -2,7 +2,7 @@ name: testing newcommers
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled]
 
 jobs:
   console:
