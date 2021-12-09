@@ -6,7 +6,7 @@ on:
 
 jobs:
   console:
-    if: contains('${{ github.event.label.name }}', 'bug')
+    if: contains('${{ github.event.label.name }}', ['bug', 'documentation'])
     runs-on: ubuntu-latest
     steps:
       - name: print
@@ -19,7 +19,7 @@ jobs:
           echo "${{github.event.issue.labels}}"
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
-          echo "${env.l[*]}"
+          echo "${{env.l}}"
           echo "${{github.event.labels.name}}"
           echo "${{github.event.labels}}"
   always-printing:
