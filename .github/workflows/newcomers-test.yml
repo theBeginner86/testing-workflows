@@ -2,7 +2,7 @@ name: testing newcommers
 
 on:
   issues:
-    types: [opened, edited, labeled]
+    types: [opened, labeled]
 
 jobs:
   bug-job:
