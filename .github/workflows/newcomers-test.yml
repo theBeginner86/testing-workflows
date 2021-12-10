@@ -2,7 +2,7 @@ name: testing newcommers
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   bug-job:
@@ -24,7 +24,7 @@ jobs:
           echo "${{github.event.label.name}}"
           echo "${{github.event.label}}"
   good-first-issue-job:
-    if: contains(github.event.issue.labels.*.name, 'good first issue') 
+    if: "${{github.event.label.*.name == 'good first issue'}}"
     name:  good-first-issue
     runs-on: ubuntu-latest
     steps:
