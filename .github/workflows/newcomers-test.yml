@@ -21,8 +21,8 @@ jobs:
           echo "${{github.event.issue.number}}"
           echo "https://github.com/${{github.repository}}"
           echo "${{env.l}}"
-          echo github.event.label.name
-          echo github.event.label
+          echo "${{github.event.label.name}}"
+          echo "${{github.event.label}}
   good-first-issue-job:
     if: contains(github.event.issue.labels.*.name, 'good first issue') 
     name:  good-first-issue
