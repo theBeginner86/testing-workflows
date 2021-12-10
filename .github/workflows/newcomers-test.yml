@@ -6,7 +6,7 @@ on:
 
 jobs:
   good-first-issue-job:
-    if: github.event.label.name == 'good first issue'
+    if: github.event.label.name == 'good first issue' || github.event.label.name == 'bug'
     name:  good-first-issue
     runs-on: ubuntu-latest
     steps:
