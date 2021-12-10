@@ -5,24 +5,6 @@ on:
     types: [opened, labeled]
 
 jobs:
-  bug-job:
-    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'documentation') 
-    name: bug or documentation
-    runs-on: ubuntu-latest
-    steps:
-      - name: print
-        run: |
-          echo "${{github.sender}}"
-          echo "${{github.actor}}"
-          echo "${{github.event}}"
-          echo "${{github.event.issue.html_url}}"
-          echo "l=${{github.event.issue.labels}}" >> $GITHUB_ENV
-          echo "${{github.event.issue.labels.*.name}}"
-          echo "${{github.event.issue.number}}"
-          echo "https://github.com/${{github.repository}}"
-          echo "${{env.l}}"
-          echo "${{github.event.label.name}}"
-          echo "${{github.event.label}}"
   good-first-issue-job:
     if: github.event.label.name == 'good first issue'
     name:  good-first-issue
