@@ -6,7 +6,7 @@ on:
 
 jobs:
   bug-job:
-    if: contains(github.event.issue.labels.*.name, 'bug')
+    if: contains(github.event.issue.labels.*.name, 'bug') || contains(github.event.issue.labels.*.name, 'documentation') 
     name: bug
     runs-on: ubuntu-latest
     steps:
