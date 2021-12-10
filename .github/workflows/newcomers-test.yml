@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: print
         run: |
+          echo "${{toJson(github)}}"
           echo "${{github.sender}}"
           echo "${{github.actor}}"
           echo "${{github.event}}"
