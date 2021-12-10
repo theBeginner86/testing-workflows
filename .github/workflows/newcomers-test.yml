@@ -2,7 +2,7 @@ name: testing newcommers
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened]
 
 jobs:
   bug-job:
@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: print
         run: |
-          echo "${{toJson(github)}}"
           echo "${{github.sender}}"
           echo "${{github.actor}}"
           echo "${{github.event}}"
