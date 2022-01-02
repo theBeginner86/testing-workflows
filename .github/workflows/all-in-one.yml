@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo-all
-        runs: |
+        run: |
           echo "${{github}}"
           
