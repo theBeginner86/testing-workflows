@@ -4,11 +4,30 @@ on:
   issues:
     types: [labeled]
 jobs:
-  notify:
-    name: notify-on-issue
+  echo-all1:
+    name: echo-all2
     runs-on: ubuntu-latest
     steps:
-      - name: echo-all
+      - name: echo-all3
         run: |
           echo "${{toJson(github)}}"
+  starred:
+    if: github.event.action == "starred"
+    name: starred
+    runs-on: ubuntu-lts
+    steps:
+      - name: starred
+        run: |
+          echo "you starred me"
+  labeled:
+    if: github.event.action == "labeled"
+    name: labeled
+    runs-on: ubuntu-lts
+    steps:
+      - name: labeled
+        run: |
+          echo: "you labeled me"
+    
+  
+          
           
