@@ -12,7 +12,7 @@ jobs:
         run: |
           echo "${{toJson(github)}}"
   starred:
-    if: github.event.action == 'starred'
+    if: github.event_name == 'watch'
     name: starred
     runs-on: ubuntu-lts
     steps:
@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "you starred me"
   labeled:
-    if: github.event.action == 'labeled'
+    if: github.event_name == 'issues'
     name: labeled
     runs-on: ubuntu-lts
     steps:
