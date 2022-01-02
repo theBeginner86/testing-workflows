@@ -1,0 +1,11 @@
+name: all-in-one
+on: watch
+jobs:
+  notify:
+    name: notify-on-issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo-all
+        runs: |
+          echo "${{github}}"
+          
