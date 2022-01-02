@@ -1,5 +1,9 @@
 name: all-in-one
-on: watch
+on: 
+  watch:
+    types: [watch]
+  issues:
+    types: [labeled]
 jobs:
   notify:
     name: notify-on-issue
