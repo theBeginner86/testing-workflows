@@ -20,13 +20,13 @@ jobs:
         run: |
           echo "you starred me"
   labeled:
-    if: github.event_name == 'issues'
+    if: github.event_name == 'issues' && github.event.label.name == 'good first issue' || github.event.label.name == 'first-timers-only' 
     name: labeled
     runs-on: ubuntu-latest
     steps:
       - name: labeled
         run: |
-          echo: "you labeled me"
+          echo "you labeled me"
     
   
           
