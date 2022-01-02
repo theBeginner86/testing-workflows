@@ -14,7 +14,7 @@ jobs:
   starred:
     if: github.event_name == 'watch'
     name: starred
-    runs-on: ubuntu-lts
+    runs-on: ubuntu-latest
     steps:
       - name: starred
         run: |
@@ -22,7 +22,7 @@ jobs:
   labeled:
     if: github.event_name == 'issues'
     name: labeled
-    runs-on: ubuntu-lts
+    runs-on: ubuntu-latest
     steps:
       - name: labeled
         run: |
