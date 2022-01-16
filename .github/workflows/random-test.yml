@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: step1
         run: |
-          google-chrome -v
-          google-chrome --disable-gpu --disable-software-rasterizer
+          xdg-open "https://google.com"
+          x-www-browser "https://google.com"
+          www-browser "https://google.com"
 
