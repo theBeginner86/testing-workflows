@@ -1,10 +1,14 @@
 name: random-test
+
 on:
+  issues:
+    types: [labeled]
 
 jobs:
   test1:
-  runs-on: ubuntu-latest
-  steps:
-    - name: step1
-      run: |
-      echo "google-chrome -v"
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        run: |
+          echo google-chrome -v
+
