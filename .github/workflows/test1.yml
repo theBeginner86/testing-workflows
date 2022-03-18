@@ -15,6 +15,6 @@ jobs:
       - name : Print stars
         run : |
           echo "${{ env.STARS }}"
-          
+          echo "working..."
           
 
