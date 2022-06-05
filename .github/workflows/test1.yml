@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print repo name
-        run : |
+        ru : |
           echo "Hello $GITHUB_REPOSITORY ok"
-          echo "hello ${{ github.repository }}"
-          echo "STARS=$(curl --silent 'https://api.github.com/repos/${{github.repository}}' -H 'Accept: application/vnd.github.preview' | jq '.stargazers_count')" >> $GITHUB_ENV
+           "hello ${{ github.repository }}"
           
       - name : Print stars
+        if: success()
         run : |
           echo "${{ env.STARS }}"
