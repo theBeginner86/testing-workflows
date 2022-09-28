@@ -25,4 +25,4 @@ jobs:
     steps:
       - name: print gitsha
         run: |
-          echo "okokok"
+          echo ${GITHUB_REF}
