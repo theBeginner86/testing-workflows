@@ -25,7 +25,4 @@ jobs:
     steps:
       - name: print gitsha
         run: |
-          echo "${{GITHUB_SHA::7}}"
-          echo "${GITHUB_SHA::7}"
-          echo "${GITHUB_REF/refs\/tags\//}"
-          echo "${{GITHUB_REF/refs\/tags\//}}"
+          echo "okokok"
