@@ -17,3 +17,4 @@ jobs:
           echo "${{github.event.issue.number}}"
           echo "${{toJson(github)}}"
           echo "${{toJson(github.event)}}"
+          echo "test"
