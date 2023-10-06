@@ -25,5 +25,5 @@ jobs:
     steps:
       - name: print gitsha
         run: |
-          echo ${GITHUB_REF/refs\/tags\//}
-          echo ${GITHUB_SHA::7}
+          npm i -g eslint;
+          npm i -g prettier;
